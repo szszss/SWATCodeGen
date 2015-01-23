@@ -1,19 +1,30 @@
 # SWATCodeGen
-SWATCodeGen is a Code Generator for a WC3 map named "SWAT Aftermath". 
+SWATCodeGen is a Code Generator for a WC3 map named "SWAT Aftermath". <br/>
 It can generate a code with any ranks, any classes, any talents(Anyway,restricted by class) and any medals.
 
-#Known Problems:
-An player’s id which contains SPECIAL non-ascii character may cause the generated code unusable. That means most Unicode names such as “phrātēr”, “幽幽sama一生推” and “安らかに眠れ” are ( at least, “should be” ) available. However, in a few status, it will fail. I don’t know why it happen. Maybe it depends on the amount of Unicode character, or… just some mum f**kers don’t know how to use a such easy software.
+# Download
+SkyDrive:<br/>
+[中文](http://1drv.ms/15gD5qG)<br/>
+[English](http://1drv.ms/1uz9uVE)
 
+DropBox:<br/>
+[中文](https://www.dropbox.com/s/0z866f9e7vlrdra/SWATCodeGen1.2_CN.zip?dl=0)<br/>
+[English](https://www.dropbox.com/s/gc4wvq6o5ls7izc/SWATCodeGen1.2_EN.zip?dl=0)
+
+BaiduPan:<br/>
+[中文](http://pan.baidu.com/s/1dDhFlKl)
+
+#Known Problems
+An player’s id which contains SPECIAL non-ascii character may cause the generated code unusable. That means most Unicode names such as “phrātēr”, “幽幽sama一生推” and “安らかに眠れ” are ( at least, “should be” ) available. However, in a few status, it will fail. I don’t know why it happen. Maybe it depends on the amount of Unicode character, or… just some mum f**kers don’t know how to use a such easy software.<br/>
 Sometime the auto-copy may fail, but you can manually copy it.
 
 # The Algorithm
 All right, cracker boy, I'm sure that you don't care about a crude gui program. So let's talk about the damn algorithm of SWAT:AM.
 
-This algorith has **three** stages : Raw codes generating, Internal swap, and Breed.
+This algorith has **three** stages : Raw codes generating, Mixing, and Disordering.
 
 **Raw code generating** is the first and most important stage, it has two passes, both pass are parallel. Every pass will generate a raw code. So this stage will generate two raw codes.
--  **The pass one** is relative simple. First, it will pick a random even integer from 0, 2, 4, 6, 8, and 10. We name it **the Seed**.
+-  **The pass one** <del>is relative simple</del>. First, it will pick a random even integer from 0, 2, 4, 6, 8, and 10. We name it **the Seed**.
 - Second, it will generate **the Normalized Talent** by player's **Class Code** and **Talent Code**.
 
 | Class (Class Code))      |    Talent (Talent Code) | Normalized Talent  |
