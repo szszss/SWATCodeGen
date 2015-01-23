@@ -250,8 +250,8 @@ string FixLength(string str, int length)
 ```
 
 - Now, we have **the first Raw code**.
-- We are going to talk about **the pass two**. However, I wanna stress again that both passes are parallel. Neither of them requires the other's result. **THAT MEANS THE NORMALIZATIONS AND OBSCURING IN PASS ONE WON'T EFFECT PASS TWO!**
-- The pass two has some redundant codes. I skip them since they won't effect the result.
+- We are going to talk about **the pass two**. However, I wanna stress again that both passes are parallel. Neither of them requires the other's result. **THAT MEANS THE NORMALIZATIONS AND OBSCURING IN PASS ONE WON'T AFFECT PASS TWO!**
+- The pass two has some redundant codes. I skip them since they won't affect the result.
 - First, it will hash player's name, generates **the Hashed Name**.
 
 ```
