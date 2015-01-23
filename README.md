@@ -1,5 +1,5 @@
 # SWATCodeGen
-SWATCodeGen is a Code Generator for a WC3 map named "SWAT Aftermath". <br/>
+SWATCodeGen is a Code Generator for a WC3 map named "SWAT Aftermath".
 It can generate a code with any ranks, any classes, any talents(Anyway,restricted by class) and any medals.
 
 # Download
@@ -101,7 +101,7 @@ Oh, and this is **the Armour Code** table:
 
 - After normalizing, if Armour Code > 2, clamp it to 2.
  (In fact, it's impossible that the Armour Code is greater than 2, since it has been normalized.)
-- And than, it will obscure **the Level Code**, the level code equals subtracting one from player's level.
+- And then, it will obscure **the Level Code**, the level code equals subtracting one from player's level.
  ( Level Code = Level - 1, i.e. a level 1 player's level code is 0, a level 12 player's level code is 11 )
  
 ```
