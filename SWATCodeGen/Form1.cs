@@ -505,10 +505,11 @@ namespace SWATCodeGen
             string code1 = getFirstCode(type, armour, trait, spec, talent, diff, level, unusedXP, medal1, medal2, medal3, medal4, medal5, medal6);
             //richTextBox1.AppendText("Debug - Ep:" + code1);
             //richTextBox1.AppendText("\n");
-            string code2 = getSecondCode(type, armour, trait, spec, talent, diff, level, unusedXP, medal1, medal2, medal3, medal4, medal5, medal6);
+            //Second code is unused.
+            string code2 = getThirdCode(type, armour, trait, spec, talent, diff, level, unusedXP, medal1, medal2, medal3, medal4, medal5, medal6);
             //richTextBox1.AppendText("Debug - OldXp:" + code2);
             //richTextBox1.AppendText("\n");
-            string code3 = code1.Substring(0, 2) + code2.Substring(4, 1) + code1.Substring(2, 2) + code1.Substring(4, 2) + code2.Substring(3, 1) + code1.Substring(6, 2) + code2.Substring(1, 2) + code1.Substring(8, 3) + code2.Substring(0, 1);
+            string code3 = code1.Substring(0, 2) + code2.Substring(4, 1) + code1.Substring(2, 4) + code2.Substring(3, 1) + code1.Substring(6, 2) + code2.Substring(1, 2) + code1.Substring(8, 3) + code2.Substring(0, 1);
             //richTextBox1.AppendText("Debug - NewXp:" + code3);
             //richTextBox1.AppendText("\n");
             int i = Convert.ToInt32(code3.Substring(0, 1));
@@ -745,6 +746,7 @@ namespace SWATCodeGen
             return random.ToString() + fixString(code.ToString(), 9) + (unusedXP % 10).ToString();
         }
 
+        //Unused!
         private string getSecondCode(int type, int armour, int trait, int spec, int talent, int diff, int level, int unusedXP, int medal1, int medal2, int medal3, int medal4, int medal5, int medal6)
         {
             //return "68714";
@@ -811,13 +813,13 @@ namespace SWATCodeGen
             return ym;
         }
 
-        private string getThirdCode(int type, int armour, int tianfu1, int tianfu2, int teji, int diff, int level, int unusedXP, int xz1, int xz2, int xz3, int xz4, int xz5, int xz6)
+        private string getThirdCode(int type, int armour, int trait, int spec, int talent, int diff, int level, int unusedXP, int medal1, int medal2, int medal3, int medal4, int medal5, int medal6)
         {
             //talent = 5;
-            int i = getPlayerNameInt2(getPlayerName()) * (tianfu2 + 1) + (tianfu1 + 4) * (tianfu1 + 6) + (level + 1) * (unusedXP + 1) + (teji + 1) * 43 * factor1[getPlayerNameInt2(getPlayerName()) % 10] - (type + 1) * (241 + factor2[getPlayerNameInt2(getPlayerName()) % 10]) - (xz6 + 1) * 50;
+            int i = getPlayerNameInt2(getPlayerName()) * (spec + 1) + (trait + 4) * (trait + 6) + (level + 1) * (unusedXP + 1) + (talent + 1) * 43 * factor1[getPlayerNameInt2(getPlayerName()) % 10] - (type + 1) * (241 + factor2[getPlayerNameInt2(getPlayerName()) % 10]) - (medal6 + 1) * 50;
             //richTextBox1.AppendText("i1:" + i);
             //richTextBox1.AppendText("\n");
-            i+=(xz1+1)*4+(xz2+1)*9+(xz3+1)*19+(xz4+1)*39+(xz5+1)*79+(armour+1)*159;
+            i+=(medal1+1)*4+(medal2+1)*9+(medal3+1)*19+(medal4+1)*39+(medal5+1)*79+(armour+1)*159;
             //richTextBox1.AppendText("i2:" + i);
             //richTextBox1.AppendText("\n");
             i += 100 * (diff + 1) * (i % 1000);
