@@ -24,7 +24,7 @@ All right, cracker boy, I'm sure that you don't care about a crude gui program. 
 This algorith has **three** stages : Raw codes generating, Mixing, and Disordering.
 
 **Raw code generating** is the first and most important stage, it has two passes, both pass are parallel. Every pass will generate a raw code. So this stage will generate two raw codes.
--  **The pass one** <del>is relative simple</del>. First, it will pick a random even integer from 0, 2, 4, 6, 8, and 10. We name it **the Seed**.
+-  **The pass one** <del>is relative simple</del>. First, it will pick a random even integer from 0, 2, 4, 6, and 8. We name it **the Seed**.
 - Second, it will generate **the Normalized Talent** by player's **Class Code** and **Talent Code**.
 
 | Class (Class Code))      |    Talent (Talent Code) | Normalized Talent  |
